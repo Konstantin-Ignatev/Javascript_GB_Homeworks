@@ -1,9 +1,9 @@
 /*Задание 1*/
 
-const thirdNum = number => number * number * number;
+// const thirdNum = number => number * number * number;
 
-console.log(thirdNum(2));
-console.log(thirdNum(3));
+// console.log(thirdNum(2));
+// console.log(thirdNum(3));
 
 /*Задание 2*/
 
