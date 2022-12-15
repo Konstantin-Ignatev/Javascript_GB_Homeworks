@@ -61,19 +61,57 @@
 //     },
 // ];
 
+// products.forEach(element => {
+//     console.log(element.price *= 0.85);
+
+// });
+
+/*Задача 4*/
+
+// const products = [{
+//         id: 3,
+//         price: 127,
+//         photos: [
+//             "1.jpg",
+//             "2.jpg",
+//         ],
+//     },
+//     {
+//         id: 5,
+//         price: 499,
+//         photos: [],
+//     },
+//     {
+//         id: 10,
+//         price: 26,
+//         photos: [
+//             "3.jpg",
+//         ],
+//     },
+//     {
+//         id: 8,
+//         price: 78,
+//     },
+// ];
+
+// console.log(products.filter(product => 'photos' in product &&
+//     product.photos.length !== 0));
+// console.log(products.sort((product1, product2) =>
+//     product1.price - product2.price));
+
 /*Задача 5*/
 
-const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+// const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
 
-const getObject = (array1, array2) => {
-    if (array1.length == array2.length) {
-        const daysOfWeek2 = {};
-        for (let i = 0; i < en.length; i++) {
-            daysOfWeek2[array1[i]] = array2[i];
-        }
-        return daysOfWeek2
-    } else return 'Массивы не равны';
-}
+// const getObject = (array1, array2) => {
+//     if (array1.length == array2.length) {
+//         const daysOfWeek2 = {};
+//         for (let i = 0; i < en.length; i++) {
+//             daysOfWeek2[array1[i]] = array2[i];
+//         }
+//         return daysOfWeek2
+//     } else return 'Массивы не равны';
+// }
 
-console.log(getObject(en, ru));
+// console.log(getObject(en, ru));
