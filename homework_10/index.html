@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="content"></div>
+
+    <script src="data.js"></script>
+    <script>
+        const dataEl = JSON.parse(dataJson);
+        console.log(dataEl);
+        const contentE1 = document.querySelector('.content');
+
+        dataEl.forEach(dataElem => {
+            const divE1 = document.createElement('div');
+            divE1.classList.add('top__content');
+
+            const titleEl = document.createElement('h1');
+            titleEl.classList.add('title');
+            titleEl.textContent = dataElem.quote_id;
+
+            const textEl = document.createElement('p');
+            textEl.classList.add('text');
+            textEl.textContent = dataElem.quote;
+
+            const subtitleEl = document.createElement('h3');
+            subtitleEl.classList.add('subtitle');
+            subtitleEl.textContent = dataElem.author;
+
+            const infoEl = document.createElement('p');
+            infoEl.classList.add('info');
+            infoEl.textContent
+
+            contentE1.appendChild(divE1);
+            divE1.appendChild(titleEl);
+            divE1.appendChild(textEl);
+            divE1.appendChild(subtitleEl);
+            divE1.appendChild(infoEl);
+        });
+    </script>
+</body>
+
+</html>
