@@ -9,41 +9,20 @@
 </head>
 
 <body>
+    <div class="products">
+        <img class="coffee" src="https://etogemor.ru/wp-content/uploads/2017/08/polza-kofe-dlya-organizma.jpg" width="500" height="400">
+        <div class="products__content">
+            <h1 class="products__name" href="products.html">Кофе</h1>
+            <p class="products__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolor quibusdam, alias reprehenderit aut voluptatibus, illo illum quos at labore autem fugiat possimus animi dolores ducimus distinctio totam vero laboriosam!</p>
+        </div>
+    </div>
 
-    <div class="content"></div>
-
-    <script src="data.js"></script>
+    <script src="./data.js"></script>
     <script>
-        const dataEl = JSON.parse(dataJson);
-        console.log(dataEl);
-        const contentE1 = document.querySelector('.content');
-
-        dataEl.forEach(dataElem => {
-            const divE1 = document.createElement('div');
-            divE1.classList.add('top__content');
-
-            const titleEl = document.createElement('h1');
-            titleEl.classList.add('title');
-            titleEl.textContent = dataElem.quote_id;
-
-            const textEl = document.createElement('p');
-            textEl.classList.add('text');
-            textEl.textContent = dataElem.quote;
-
-            const subtitleEl = document.createElement('h3');
-            subtitleEl.classList.add('subtitle');
-            subtitleEl.textContent = dataElem.author;
-
-            const infoEl = document.createElement('p');
-            infoEl.classList.add('info');
-            infoEl.textContent
-
-            contentE1.appendChild(divE1);
-            divE1.appendChild(titleEl);
-            divE1.appendChild(textEl);
-            divE1.appendChild(subtitleEl);
-            divE1.appendChild(infoEl);
-        });
+        const data = JSON.parse(coffPhoto);
+        console.log(data);
+        const contentEl = document.querySelector('.products');
+        contentEl.textContent = `данные из json ${data.sammy.userName}`
     </script>
 </body>
 

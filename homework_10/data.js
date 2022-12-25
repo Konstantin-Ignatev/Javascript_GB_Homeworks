@@ -1,19 +1,2 @@
-const dataJson = `[{
-        "quote_id": "1",
-        "quote": "I am not in danger, Skyler. I am the danger!",
-        "author": "Walter White",
-        "series": "Breaking Bad"
-    },
-    {
-        "quote_id": "2",
-        "quote": "Stay out of my territory.",
-        "author": "Walter White",
-        "series": "Breaking Bad"
-    },
-    {
-        "quote_id": "3",
-        "quote": "IFT",
-        "author": "Walter White",
-        "series": "Breaking Bad"
-    }
-]`
+const coffPhoto = `[{
+    "url": https://on-desktop.com/wps/2018Food___Drinks_A_cup_of_coffee_with_coffee_beans__cinnamon__chocolate_and_badan_126347_.jpg}]`
