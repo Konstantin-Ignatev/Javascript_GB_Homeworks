@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 11. Домашнее задание</title>
+    <meta name="description" content="dz11">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="js/data.js"></script>
+    <main>
+        <div class="shop_content"></div>
+    </main>
+    <script>
+        const dataItems = JSON.parse(dataJson);
+        const divElContent = document.querySelector('.shop_content');
+
+        const h2El = document.createElement('h2');
+        h2El.textContent = 'Featured Items';
+
+        const h4El = document.createElement('h4');
+        h4El.textContent = 'Shop for items based on what we featured in this week';
+
+        const itemsEl = document.createElement('ul');
+
+        divElContent.appendChild(h2El);
+        divElContent.appendChild(h4El);
+        divElContent.appendChild(itemsEl);
+
+        dataItems.forEach(dataElem => {
+
+            const liEl = document.createElement('li');
+            liEl.classList.add('item_product');
+
+            const aImgEl = document.createElement('a');
+            aImgEl.classList.add('item_product_img');
+            aImgEl.href = "#";
+
+            const imgEl = document.createElement('img');
+            imgEl.classList.add('item_img');
+            imgEl.src = dataElem.img;
+            imgEl.alt = dataElem.title;
+
+            const aTitleEl = document.createElement('a');
+            aTitleEl.classList.add('item_title_content');
+            aTitleEl.href = "#";
+            aTitleEl.textContent = dataElem.title;
+
+            const pEl = document.createElement('p');
+            pEl.textContent = dataElem.text;
+
+            const spanEl = document.createElement('span');
+            spanEl.textContent = "$" + dataElem.price;
+
+            const buttonEl = document.createElement('button');
+            buttonEl.classList.add('item_btn');
+            buttonEl.type = 'button';
+
+            itemsEl.appendChild(liEl);
+            liEl.appendChild(aImgEl);
+            aImgEl.appendChild(imgEl);
+            liEl.appendChild(aTitleEl);
+            liEl.appendChild(pEl);
+            liEl.appendChild(spanEl);
+            liEl.appendChild(buttonEl);
+        });
+    </script>
+</body>
+
+</html>
